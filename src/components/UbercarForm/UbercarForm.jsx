@@ -1,21 +1,26 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const UbercarForm = (props) => {
-  const [formData, setFormData] = useState({
-    model: '',
-    year: '',
-    make: '',
-  });
+  const initialState = {
+    model: "",
+    year: "",
+    make: "",
+  };
+  const [formData, setFormData] = useState(
+    props.selected ? props.selected : initialState
+  );
 
   const handleChange = (evt) => {
-    setFormData({ ...formData, [evt.target.model]: evt.target.value });
+    setFormData({ ...formData, [evt.target.name]: evt.target.value });
   };
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    props.handleAddUbercar(formData);
-    // Right now, if you add a Ubercar and submit the form,
-    // the data entered will stay on the page. We'll fix this soon.
+    if (props.selected) {
+      props.handleUpdateUbercar(formData, props.selected.id);
+    } else {
+      props.handleAddUbercar(formData);
+    }
   };
 
   return (
@@ -24,7 +29,7 @@ const UbercarForm = (props) => {
         <label htmlFor="model"> Model </label>
         <input
           id="model"
-          model="model"
+          name="model"
           value={formData.model}
           onChange={handleChange}
           required
@@ -32,7 +37,7 @@ const UbercarForm = (props) => {
         <label htmlFor="year"> Year </label>
         <input
           id="year"
-          model="year"
+          name="year"
           value={formData.year}
           onChange={handleChange}
           required
@@ -40,11 +45,13 @@ const UbercarForm = (props) => {
         <label htmlFor="make"> Make </label>
         <input
           id="make"
-          model="make"
+          name="make"
           value={formData.make}
           onChange={handleChange}
         />
-        <button type="submit">Add New Ubercar</button>
+        <button type="submit">
+          {props.selected ? "Update Ubercar" : "Add New Ubercar"}
+        </button>
       </form>
     </div>
   );
