@@ -80,9 +80,8 @@ function App() {
       if (deletedUbercar.err) {
         throw new Error(deletedUbercar.err);
       }
-
       setUbercars(
-        ubercars.filter((ubercar) => ubercar._id !== deletedUbercar._id)        
+        ubercars.filter((ubercar) => ubercar.id !== deletedUbercar.id)
       );
       setSelected(null);
       setIsFormOpen(false);

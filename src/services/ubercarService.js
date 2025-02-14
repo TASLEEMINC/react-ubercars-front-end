@@ -42,13 +42,13 @@ const update = async (formData, ubercarId) => {
 const deleteUbercar = async (ubercarId) => {
   try {
     const res = await fetch(`${BASE_URL}/${ubercarId}`, {
-      method: 'DELETE',
+      method: "DELETE",      
     });
+    window.location.reload();
     return res.json();
   } catch (err) {
     console.log(err);
   }
 };
 
-
-export { index, create, update, deleteUbercar, };
+export { index, create, update, deleteUbercar };

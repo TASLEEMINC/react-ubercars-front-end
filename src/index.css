@@ -1,11 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgb(225, 225, 32);
+  background-color: #1d8311;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,6 +23,10 @@ a:hover {
 }
 
 body {
+  background-image: url('/home/vitasmile/code/ga/projects/react-ubercars-front-end/stylish Uber black car.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   margin: 0;
   display: flex;
   place-items: center;
@@ -33,6 +37,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: rgb(248, 159, 57);
 }
 
 button {
@@ -42,12 +47,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: rgba(0, 0, 255, 0.534);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #64ff76;
 }
 button:focus,
 button:focus-visible {
@@ -57,12 +62,21 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #db1111;
   }
   a:hover {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #d0b14d;
   }
+}
+
+ul li {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button {
+  color: aqua;
 }
