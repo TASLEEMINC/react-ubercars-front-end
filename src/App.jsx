@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-
 import * as ubercarService from "./services/ubercarService";
-
 import UbercarList from "./components/UbercarList/UbercarList";
 import UbercarDetail from "./components/UbercarDetail/UbercarDetail";
 import UbercarForm from "./components/UbercarForm/UbercarForm";
+import { Routes, Route } from 'react-router';
+import NavBar from './components/NavBar/NavBar';
+import SignUpForm from './components/SignUpForm/SignUpForm';
 
 function App() {
   const [ubercars, setUbercars] = useState([]);
@@ -92,6 +93,11 @@ function App() {
 
   return (
     <>
+      <NavBar />
+      <h2>Hello, friend!</h2>
+      <Routes>
+        <Route path='/sign-up' element={<SignUpForm />} />
+      </Routes>
       <UbercarList
         ubercars={ubercars}
         handleSelect={handleSelect}
@@ -113,6 +119,6 @@ function App() {
       )}
     </>
   );
-}
+};
 
 export default App;
