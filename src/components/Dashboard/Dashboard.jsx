@@ -109,9 +109,9 @@ const Dashboard = () => {
   return (
     <main>
       <h1>Welcome, {user.username}</h1>
-      <h3>
+      {/* <h3>
         This is the dashboard page where you can see a list of all the ubercars.
-      </h3>
+      </h3> */}
       <UbercarList
         ubercars={ubercars}
         handleSelect={handleSelect}

@@ -1,8 +1,24 @@
 # Planning for Ubercars app
 A full-stack web application that allows users to manage car listings, view details. Users can sign up, log in, and interact with the cars, while the app includes basic CRUD functionality for car records.
 
----
+# Flask/React CRUD App Project Planning
 
+## Overview
+Build a full-stack project with a Flask API secured with JWTs interacting with a PostgreSQL database, and a React front-end that uses AJAX to communicate with the back-end.
+
+## Goals
+- Develop a secure back-end API with Flask and JWTs.
+- Implement a PostgreSQL database with full CRUD functionality.
+- Build a responsive front-end application with React.
+- Ensure the application is user-friendly and accessible.
+- Deploy the application online for public use.
+
+## Technical Requirements
+- **Back-end:** Flask with JWT authentication.
+- **Front-end:** React with AJAX for API communication.
+- **Database:** PostgreSQL.
+- **Authorization:** Implement JWT token-based authentication and authorization.
+- **Deployment:** Make the project available online.
 
 ### Car Model
 
@@ -86,3 +102,39 @@ A full-stack web application that allows users to manage car listings, view deta
 ## References
 - Canvas Study Materials
 - UNIT 4 Lecture and Support Recordings
+
+
+## Project Milestones
+### Week 1: Planning and Setup
+- [ ] **Day 1:** Define project scope and goals.
+- [ ] **Day 2:** Set up repositories on GitHub.
+- [ ] **Day 3:** Initialize Flask back-end and set up PostgreSQL database.
+- [ ] **Day 4:** Initialize React front-end.
+- [ ] **Day 5:** Plan API routes and database schema.
+- [ ] **Day 6:** Research and set up JWT authentication.
+- [ ] **Day 7:** Review progress and adjust plans.
+
+### Week 2: Back-end Development
+- [ ] **Day 8-9:** Implement user model and JWT authentication.
+- [ ] **Day 10-11:** Create additional data entities and relationships.
+- [ ] **Day 12-13:** Develop API routes for CRUD operations.
+- [ ] **Day 14:** Test and debug API routes.
+
+### Week 3: Front-end Development
+- [ ] **Day 15-16:** Build user authentication forms (sign up, sign in).
+- [ ] **Day 17-18:** Implement AJAX requests to interact with the back-end.
+- [ ] **Day 19-20:** Build components for CRUD functionality.
+- [ ] **Day 21:** Ensure front-end does not hold any secret keys.
+
+### Week 4: UI/UX and Deployment
+- [ ] **Day 22-23:** Apply consistent visual theme and style UI components.
+- [ ] **Day 24-25:** Implement user authorization checks in the UI.
+- [ ] **Day 26:** Conduct accessibility checks and make necessary adjustments.
+- [ ] **Day 27:** Deploy the application online.
+- [ ] **Day 28:** Final testing and adjustments.
+
+## Code Convention
+- Ensure proper organization and naming conventions.
+- Avoid dead code and unnecessary comments.
+- Follow RESTful routing conventions for back-end routes.
+- Maintain proper indentation and code formatting.
